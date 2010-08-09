@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Just The Tip jQuery Tool Tip Plugin-in</title>
+    <link rel="stylesheet" href="styles.css" type="text/css" media="screen" charset="utf-8" />
+  </head>
+  <body>
+    <div id="examples">
+      <h1>Just The Tip jQuery Tool Tip</h1>
+      <h2>What is it?</h2>
+      <p>A jQuery Tool Tip plug-in. Throw some HTML into a container, and have it appear next to the mouse cursor when you mouse over another element.</p>
+      <br />
+      <h2>Why another tooltip?</h2>
+      <p>Well, there's many different types of tooltips. Some are for input elements, some are for links. To me, it's a way to display information when I mouse over an element. I wanted something short and simple, so this is my go at it!</p>
+      <br />
+      <h2>How does it work?</h2>
+      <p>The following are a few examples of how you could use this.</p>
+      <br />
+      <h3>Example 1. Nothing fancy</h3>
+      <div id="example1">
+        <br />
+        <a href="#">This is some random link.</a>
+        <div class="tip1">
+          This is a simple tip!
+        </div>
+      </div>
+      <br />
+      <h3>Example 2. Getting a little fancy.</h3>
+      <div id="example2">
+        <br />
+        <img src="stairs.jpg" />
+        <div id="fancytip">
+          This is a fancy tip!
+        </div>
+      </div>
+    </div>
+    <div id="footer">
+      &copy; 2010 <a href="http://twitter.com/jeremywoertink">Jeremy Woertink</a>
+    </div>
+    <script type="text/javascript" charset="utf-8" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="jquery.justthetip.js"></script>
+    <script type="text/javascript" charset="utf-8">
+      $(function() {
+        $('#example1 a').justtip('#example1 .tip1');
+        $('#example2 img').justtip({
+          tip: '#fancytip',
+          x: 0,
+          y: 0,
+          styles: {
+            'background-color': 'white',
+            'padding': '5px',
+            'border': '1px solid #333333',
+            'font-size': '16px'
+          }
+        });
+      })
+    </script>
+  </body>
+</html>
