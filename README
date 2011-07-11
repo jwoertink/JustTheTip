@@ -1,2 +1,84 @@
-Just The Tip jQuery Tool Tip.
+= Just The Tip jQuery tooltip Plugin
+
+This jQuery plugin allows you display a small bit of text when your mouse cursor is over a specific element.
+
+
+= Installation
+1. Include jQuery. (Tested with 1.4.2, but probably works with newer versions)
+2. Include the jquery.justthetip.js file.
+
+  <script type="text/javascript" charset="utf-8" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+  <script type="text/javascript" charset="utf-8" src="jquery.justthetip.js"></script>
+  
+== Basic Usage
+
+HTML
+
+  <div id="example1">
+    <a href="#">This is some random link.</a>
+    <div class="tip1">
+      This is a simple tip!
+    </div>
+  </div>
+  
+JavaScript
+  
+  $(function() {
+    $('#example1 a').justtip('#example1 .tip1');
+  });
+  
+== Advanced Usage
+
+HTML
+
+  <div id="example2">
+    <img src="stairs.jpg" />
+    <div id="fancytip">
+      This is a fancy tip!
+    </div>
+  </div>
+
+JavaScript
+
+  $(function() {
+    $('#example2 img').justtip({
+      tip: '#fancytip',
+      x: 0,
+      y: 0,
+      styles: {
+        'background-color': 'white',
+        'padding': '5px',
+        'border': '1px solid #333333',
+        'font-size': '16px'
+      }
+    });
+  });
+  
+
+== Options
+  
+1. A hash with these properties
+  
+  tip    - a string CSS selector to the element that contains the tip text
+  x      - The 'x' position of the tip in relation to the mouse cursor
+  y      - The 'y' position of the tip in relation to the mouse cursor
+  styles - A javascript hash of CSS styles. This is the same format as jQuery's .css({}) method.
+
+2. A single argument
+  
+  a css selector to the tip text element.
+
+== Contributing to justthetip
+ 
+* Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet
+* Check out the issue tracker to make sure someone already hasn't requested it and/or contributed it
+* Fork the project
+* Start a feature/bugfix branch
+* Commit and push until you are happy with your contribution
+* Make sure to add tests for it. This is important so I don't break it in a future version unintentionally.
+
+== Copyright
+
+Copyright (c) 2011 Jeremy Woertink. See LICENSE.txt for
+further details.
 
